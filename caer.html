@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-header {
+  background-color: #D9D9D9;
+  display: flex;
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.icon-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+   
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+  <header class="main-header">
+  <div class="logo" onclick="goHome()">로고자리</div>
+
+  <nav class="nav-menu">
+    <a href="#">BEST</a>
+    <a href="#">여름🌱</a>
+    <a href="#">NEW</a>
+    <a href="#">특.급 당일 배송</a>
+    <a href="#">SALE</a>
+    <a href="#">COMMUNITY</a>
+  </nav>
+</header>
+
+    <div class="icon-bar">
+  <span>👤</span>
+  <span>🔍</span>
+  <span onclick="goCart()" style="cursor:pointer;">🛒</span>
+  </div>
+
+  <!-- 왼쪽 사이드 메뉴 -->
+  <aside class="side-menu">
+    <div>👕</div>
+    <div onclick="goBottom()" style="cursor: pointer;">👖</div>
+    <div>👗</div>
+    <div>👜</div>
+  </aside>
+
+  <!-- 장바구니 콘텐츠 -->
+  <main class="cart-section">
+    <h2>CART</h2>
+
+    <div class="cart-item">
+      <input type="checkbox">
+      <img src="images/cart1.jpg" alt="상품1" class="cart-img">
+      <div class="cart-info">
+        <p>블루머 시어서커 라벨 스트라이프 루즈핏 셔츠 - 3color</p>
+        <p>블랙 / S</p>
+        <button>옵션변경</button>
+        <p class="price">34900원</p>
+        <button>삭제</button>
+        <button>주문하기</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="cart-item">
+      <input type="checkbox">
+      <img src="images/cart2.jpg" alt="상품2" class="cart-img">
+      <div class="cart-info">
+        <p>몬드 썸머 니트 - 4color</p>
+        <p>라이트 그레이 / free</p>
+        <button>옵션변경</button>
+        <p class="price">28000원</p>
+        <button>삭제</button>
+        <button>주문하기</button>
+      </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="cart-buttons">
+      <button>전체상품주문</button>
+      <button>선택상품주문</button>
+    </div>
+  </main>
+
+  
+  <script>
+    function goHome() {
+      window.location.href = "index.html";
+    }
+
+    function goBottom() {
+      window.location.href = "bottom.html";
+    }
+
+    function goCart() {
+      window.location.href = "cart.html";
+    }
+  </script>
+</body>
+</html>

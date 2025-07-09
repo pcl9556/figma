@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+ .bottom-page {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.bottom-left {
+  width: 30%;
+}
+
+.bottom-left img {
+  width: 100%;
+  height: auto;
+}
+
+.tags {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 70%;
+}
+
+.bottom-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+    </style>
+
+</head>
+<body>
+    <!-- 헤더 -->
+  <header class="main-header">
+    <div class="logo" onclick="goHome()">로고자리</div>
+    <nav class="nav-menu">
+      <a href="#">BEST</a>
+      <a href="#">여름🌱</a>
+      <a href="#">NEW</a>
+      <a href="#">특.급 당일 배송</a>
+      <a href="#">SALE</a>
+      <a href="#">COMMUNITY</a>
+    </nav>
+    <div class="icons">
+      <span>👤</span>
+      <span>🔍</span>
+      <span>🛒</span>
+    </div>
+  </header>
+
+  <!-- 왼쪽 아이콘 메뉴 -->
+  <aside class="side-menu">
+    <div>👕</div>
+    <div onclick="goBottom()" style="cursor: pointer;">👖</div>
+    <div>👗</div>
+    <div>👜</div>
+  </aside>
+
+  <!-- BOTTOM 콘텐츠 -->
+  <main class="bottom-section">
+    <h2>TODAY BEST</h2>
+    <h3>BOTTOM</h3>
+
+    <!-- 태그 -->
+    <div class="tags">
+      <p># 슬랙스<br>#쇼츠<br>#데님<br>#트레이닝</p>
+    </div>
+
+    <!-- 이미지 갤러리 (예시 이미지 경로 수정 가능) -->
+    <div class="bottom-gallery">
+      <img src="images/bottom1.jpg" alt="bottom1">
+      <img src="images/bottom2.jpg" alt="bottom2">
+      <img src="images/bottom3.jpg" alt="bottom3">
+      <img src="images/bottom4.jpg" alt="bottom4">
+      <img src="images/bottom5.jpg" alt="bottom5">
+      <img src="images/bottom6.jpg" alt="bottom6">
+    </div>
+  </main>
+  
+  <script>
+    // 로고 클릭하면 메인 페이지로 이동
+    function goHome() {
+      window.location.href = "index.html";
+    }
+
+    // 바텀 버튼 클릭 시 바텀 페이지로 이동 (이미 bottom이므로 새로고침)
+    function goBottom() {
+      window.location.href = "bottom.html";
+    }
+  </script>
+</script>
+</body>
+</html>
+</body>
+</html>
