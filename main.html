@@ -11,7 +11,6 @@
   font-family: sans-serif;
     }
 
-
   .main-header {
   display: flex;
   justify-content: space-between;
@@ -19,7 +18,6 @@
   background-color: #D9D9D9;
   padding: 10px 30px;
   }
-
 
   .logo {
   font-size: 24px;
@@ -91,17 +89,37 @@
 .update-images {
   display: flex;
   gap: 20px;
+  justify-content: center;
   margin-top: 20px;
-  margin-left: 15%;
-  }
+}
 
-.update-images img {
-  width: 30%;
+.img-box {
+  width: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.img-box img {
+  width: 100%;
+  height: 400px;
   object-fit: cover;
-  height: 500px;
-  }
-</style>
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
 
+.img-box:hover img {
+  transform: scale(1.05);
+}
+
+.img-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+  
+
+</style>
 </head>
 <body>
     <!-- 헤더 -->
@@ -137,15 +155,28 @@
   </div>
 
   <!-- 메인 컨텐츠 -->
-  <main class="content">
-    <h2>TODAY update</h2>
-    <div class="update-images">
-      <img src="image/pew-nguyen-RjOfUpyKmNs-unsplash.jpg" alt="update1">
-      <img src="image/anastase-maragos-Uo-k5ZCaeCo-unsplash.jpg" alt="update2">
-      <img src="image/praja-nugraha-Te7YTtk_c4Q-unsplash.jpg" alt="update3">
-    </div>
-  </main>
 
+   <main class="content">
+  <h2>TODAY update</h2>
+  <div class="update-images">
+    
+    <div class="img-box">
+      <img src="image/pew-nguyen-RjOfUpyKmNs-unsplash.jpg" alt="설명1">
+      <p class="img-text">린넨 나시 원피스 - 2color <br> 42000원</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/anastase-maragos-Uo-k5ZCaeCo-unsplash.jpg" alt="설명2">
+      <p class="img-text">[추천] 탄탄 반팔티셔츠 - 6color <br> 18000원</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/praja-nugraha-Te7YTtk_c4Q-unsplash.jpg" alt="설명3">
+      <p class="img-text">[여름] 썸머 체크 셔츠 - 3color <br> 22000원</p>
+    </div>
+
+  </div>
+</main>
   
   <script>
     // 로고 클릭하면 메인 페이지로 이동

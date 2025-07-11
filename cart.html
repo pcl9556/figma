@@ -65,9 +65,13 @@
   }
 
   .cart-img img {
-     width: 300%;
+     width: 300px;
      object-fit: contain;
-     height: 500px;
+     height: auto;
+  }
+
+  .cart-buttons {
+
   }
 
     </style>
@@ -103,7 +107,6 @@
 
   <!-- 장바구니 콘텐츠 -->
   <main class="cart-section">
-    <h2>CART</h2>
 
     <div class="cart-item">
       <input type="checkbox">
@@ -138,12 +141,13 @@
 
     <!-- 하단 버튼 -->
     <div class="cart-buttons">
-      <button>전체상품주문</button>
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
       <button>선택상품주문</button>
-    </div>
+      <button>전체상품주문</button>
+      </div>
+      </div>
   </main>
 
-  
   <script>
     function goHome() {
       window.location.href = "main.html";
